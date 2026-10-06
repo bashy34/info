@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>באשי שיף – בניית אתרים ומערכות</title>
+<meta name="description" content="בניית אתרים, מערכות ניהול לקוחות ואוטומציה. שיחה, מייל או שמירה באנשי הקשר בלחיצה.">
+<meta property="og:title" content="באשי שיף – בניית אתרים ומערכות">
+<meta property="og:description" content="אתר שמביא לקוחות, ומערכת שמנהלת אותם.">
+<meta property="og:image" content="https://bashy34.github.io/info/og.png">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0a0a0c;--line:#1c1c21;--text:#f5f5f0;--muted:#9a9aa2;--lime:#c8ff3d}
+  *{box-sizing:border-box;margin:0}
+  body{font-family:Heebo,Arial,sans-serif;color:var(--text);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;
+    background:radial-gradient(circle at 50% 70%,rgba(200,255,61,.18),transparent 55%),
+      linear-gradient(var(--line) 1px,transparent 1px) 0 0/48px 48px,
+      linear-gradient(90deg,var(--line) 1px,transparent 1px) 0 0/48px 48px,var(--bg)}
+  main{width:100%;max-width:380px;text-align:center}
+  h1{font-size:36px;font-weight:900;letter-spacing:-.5px}
+  .sub{font-size:18px;font-weight:300;color:var(--muted);margin-top:4px}
+  .slogan{font-size:23px;font-weight:900;line-height:1.3;margin:18px 0 16px}
+  .slogan span{color:var(--lime);display:inline-block;border-bottom:3px solid var(--lime);padding-bottom:4px}
+  a.btn,button.btn{display:block;width:100%;text-decoration:none;font-family:inherit;font-size:18px;font-weight:700;padding:15px;border-radius:999px;margin-bottom:10px;cursor:pointer;
+    border:1.5px solid rgba(245,245,240,.25);background:rgba(245,245,240,.05);color:var(--text);transition:transform .15s}
+  .btn:active{transform:scale(.97)}
+  .primary{background:var(--lime);border-color:var(--lime);color:var(--bg)}
+  .hint{font-size:13px;color:var(--muted);margin:-2px 0 14px}
+  .work{display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 18px;flex-wrap:wrap}
+  .worklabel{font-size:14px;color:var(--muted)}
+  .workpill{display:inline-flex;align-items:center;gap:7px;text-decoration:none;color:var(--text);font-size:15px;font-weight:700;
+    padding:8px 14px;border-radius:999px;border:1px solid rgba(200,255,61,.45);background:rgba(200,255,61,.08)}
+  .workpill em{font-style:normal;font-weight:300;color:var(--muted);font-size:13px}
+  .proof{margin-top:24px;font-size:15px;color:var(--muted)}
+  .proof a{color:var(--text)}
+  .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--lime);margin-left:6px;box-shadow:0 0 0 4px rgba(200,255,61,.2)}
+  #toast{position:fixed;bottom:28px;right:50%;transform:translateX(50%);background:var(--lime);color:var(--bg);font-weight:700;
+    padding:12px 22px;border-radius:999px;opacity:0;pointer-events:none;transition:opacity .25s}
+  #toast.show{opacity:1}
+</style>
+</head>
+<body>
+<main>
+  <h1>באשי שיף</h1>
+  <p class="sub">בניית אתרים ומערכות ניהול</p>
+  <p class="slogan">אתר ומערכת<br><span>שעובדים בשבילכם</span></p>
+
+  <div class="work">
+    <span class="worklabel">משהו שבניתי:</span>
+    <a class="workpill" href="https://www.dirochag.co.il" target="_blank" rel="noopener"><span class="dot"></span>דירוחג <em>אתר, מערכת ותשלומים</em></a>
+  </div>
+
+  <a class="btn primary" href="bashi.vcf" download="באשי – מערכות ואתרים.vcf">שמרו אותי באנשי הקשר</a>
+  <p class="hint">ייפתח כרטיס איש קשר, לחצו "שמור"</p>
+
+  <a class="btn" href="tel:+972534125608">חייגו אליי · 053-412-5608</a>
+
+  <a class="btn" id="mail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=b053412508@gmail.com&amp;su=%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%91%D7%A2%D7%A7%D7%91%D7%95%D7%AA%20%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D%20%E2%80%93%20%D7%99%D7%99%D7%A2%D7%95%D7%9C%20%D7%95%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA%20%D7%9C%D7%A2%D7%A1%D7%A7&amp;body=%D7%A9%D7%9C%D7%95%D7%9D%2C%0A%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D.%0A%D7%A1%D7%95%D7%92%20%D7%94%D7%A2%D7%A1%D7%A7%3A%0A%D7%98%D7%9C%D7%A4%D7%95%D7%9F%20%D7%9C%D7%97%D7%96%D7%A8%D7%94%3A%0A" target="_blank" rel="noopener">כתבו לי מייל</a>
+  <button class="btn" id="copy">העתקת כתובת המייל</button>
+
+
+</main>
+<div id="toast">הכתובת הועתקה</div>
+<script>
+  var MAIL = "b053412508@gmail.com";
+  var SUBJ = decodeURIComponent("%D7%A4%D7%A0%D7%99%D7%99%D7%94%20%D7%91%D7%A2%D7%A7%D7%91%D7%95%D7%AA%20%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D%20%E2%80%93%20%D7%99%D7%99%D7%A2%D7%95%D7%9C%20%D7%95%D7%9E%D7%A2%D7%A8%D7%9B%D7%AA%20%D7%9C%D7%A2%D7%A1%D7%A7");
+  var BODY = decodeURIComponent("%D7%A9%D7%9C%D7%95%D7%9D%2C%0A%D7%A8%D7%90%D7%99%D7%AA%D7%99%20%D7%90%D7%AA%20%D7%94%D7%A4%D7%A8%D7%A1%D7%95%D7%9D%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D.%0A%D7%A1%D7%95%D7%92%20%D7%94%D7%A2%D7%A1%D7%A7%3A%0A%D7%98%D7%9C%D7%A4%D7%95%D7%9F%20%D7%9C%D7%97%D7%96%D7%A8%D7%94%3A%0A");
+  // במכשירים ניידים פותחים את אפליקציית המייל המוגדרת; במחשב נפתח Gmail בדפדפן
+  var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (isMobile) {
+    document.getElementById("mail").href =
+      "mailto:" + MAIL + "?subject=" + encodeURIComponent(SUBJ) + "&body=" + encodeURIComponent(BODY);
+    document.getElementById("mail").removeAttribute("target");
+  }
+  function toast(){ var t=document.getElementById("toast"); t.classList.add("show"); setTimeout(function(){t.classList.remove("show");},1800); }
+  document.getElementById("copy").addEventListener("click", function(){
+    if (navigator.clipboard) { navigator.clipboard.writeText(MAIL).then(toast, toast); }
+    else {
+      var i=document.createElement("input"); i.value=MAIL; document.body.appendChild(i); i.select();
+      document.execCommand("copy"); document.body.removeChild(i); toast();
+    }
+  });
+</script>
+</body>
+</html>
